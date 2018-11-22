@@ -1,21 +1,10 @@
 <template>
-    <ul class="list-group offset-4 col-lg-4">
-        <li class="list-group-item">Cras justo odio</li>
-        <li class="list-group-item">Dapibus ac facilisis in</li>
-        <li class="list-group-item">Morbi leo risus</li>
-        <li class="list-group-item">Porta ac consectetur ac</li>
-        <li class="list-group-item">Vestibulum at eros</li>
+    <ul class="nav nav-tabs">
+        <li class="nav-item mr-2">
+            <router-link to="/home" class="btn btn-outline-success">Home</router-link>
+        </li>
+        <li class="nav-item">
+            <router-link to="/profile" class="btn btn-outline-success">Profile</router-link>
+        </li>
     </ul>
 </template>
-
-<script>
-    export default {
-    mounted() {
-        console.log('Component mounted.')
-    }
-}
-</script>
-
-<style scoped>
-
-</style>

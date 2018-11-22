@@ -10,9 +10,11 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="app">
-        @csrf
-        <my-header></my-header>
+    <div id="app" class="mt-lg-5">
+        <div class="container offset-3 col-6">
+            <my-header></my-header>
+            <router-view></router-view>
+        </div>
     </div>
 <script src="{{asset('js/app.js')}}"></script>
 </body>

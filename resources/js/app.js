@@ -6,14 +6,30 @@
  */
 
 require('./bootstrap');
-
 window.Vue = require('vue');
+
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+Vue.use(VueRouter);
 
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
 Vue.component('my-header', require('./components/MyHeader.vue'));
+let Home = require('./components/Home.vue');
+let Profile = require('./components/Profile.vue');
+
+const routes = [
+    { path: '/home', component: Home },
+    { path: '/profile', component: Profile }
+];
+
+const router = new VueRouter({
+    mode: 'history',
+    routes // short for `routes: routes`
+});
 
 const app = new Vue({
     el: '#app',
+    router,
     created(){
         console.log('Hello World');
     }
